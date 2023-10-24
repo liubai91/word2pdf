@@ -93,11 +93,14 @@ handler.process("d:/11.pdf");
 
 上述代码中传入的根数据为Student,所以用指令绑定Student中的属性时，直接引用属性名即可，
 新建模板文件，添加内容如下，
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21567582/1698134578108-e5f1f50b-7e04-4b15-b380-514b756569ec.png#averageHue=%23fdfdfd&clientId=uf974f6fb-d393-4&from=paste&height=169&id=uc6d9dead&originHeight=337&originWidth=747&originalType=binary&ratio=2&rotation=0&showTitle=false&size=11838&status=done&style=none&taskId=u78f941ec-8d2a-486e-adef-781c0302c15&title=&width=373.5)
 
 运行程序即可得到目标PDF文件如下，可以看到指令${name}在模板中应用了粗体样式，目标PDF
 中的“张三”也被应用了粗体
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21567582/1698134624272-76c41e45-0df8-4ac4-95b2-463ce642d9c8.png#averageHue=%23fefefe&clientId=uf974f6fb-d393-4&from=paste&height=169&id=u8d524203&originHeight=337&originWidth=727&originalType=binary&ratio=2&rotation=0&showTitle=false&size=10608&status=done&style=none&taskId=u8ceee0db-34d4-4359-b8e7-528c7b4d421&title=&width=363.5)
+
 # 模版语法
 
 - **简单数据绑定**
@@ -145,9 +148,13 @@ Map<String, Object> data = new HashMap<String, Object>();
         handler.process("d:/11.pdf");
 ```
 使用如下图所示的模板
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21567582/1698134923511-2f09f4de-6b82-4f89-82fb-7c2f028c256b.png#averageHue=%23faf9f9&clientId=uf974f6fb-d393-4&from=paste&height=180&id=u177dfff3&originHeight=360&originWidth=735&originalType=binary&ratio=2&rotation=0&showTitle=false&size=37702&status=done&style=none&taskId=uc8b4ffe9-a192-484e-af55-cd35bdfbd01&title=&width=367.5)
+
 运行程序得到下图所示PDF
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21567582/1698134953905-f3453bf7-9b64-447e-ba33-59c0753ee36c.png#averageHue=%23f9f9f9&clientId=uf974f6fb-d393-4&from=paste&height=184&id=ua46a1e10&originHeight=368&originWidth=732&originalType=binary&ratio=2&rotation=0&showTitle=false&size=36140&status=done&style=none&taskId=udc5f9f65-15d7-4ad5-b328-9e6e3f4a522&title=&width=366)   
+
 如上所示，对集合的两级遍历会产生单元格合并
 
 - **复选框**
@@ -158,6 +165,7 @@ Map<String, Object> data = new HashMap<String, Object>();
 如下是一个案例模板
 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21567582/1698135013488-2546e932-9907-4884-8890-e03bb67c13b0.png#averageHue=%23f9f7f6&clientId=uf974f6fb-d393-4&from=paste&height=35&id=u30e636af&originHeight=69&originWidth=718&originalType=binary&ratio=2&rotation=0&showTitle=false&size=17304&status=done&style=none&taskId=u8391ef52-94b9-4c3f-b35e-0f05ad73986&title=&width=359)
+
 请参考ongl表达式写法，可以轻易将非布尔型属性组合成一个返回值为布尔类型的表达式
 
 - **条件块**
